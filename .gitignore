@@ -1,0 +1,2 @@
+git status
+git check-ignore -v .ei_api_key
