@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# --- 1. 定義路徑並建立檔案 ---
+# 獲取當前日期 (MMDD 格式)
+export PROJECT_ROOT=$(pwd)
+TODAY=$(date +%m%d)
+
+# 定義 log 檔案名稱 (例如: 1210.log)
+LOG_FILENAME="${TODAY}.log"
+LOG_FILE_PATH=稱 (例如: 1210.log)
+LOG_FILENAME="${
+
+# 檢查並建立 log 檔案
+if [ ! -f "${LOG_FILE_PATH}" ]; then
+    touch "${LOG_FILE_PATH}"
+fi
