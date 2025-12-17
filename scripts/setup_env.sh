@@ -55,3 +55,6 @@ echo -e "${BLUE}---------------------------------------${NC}"
 
 echo -e "${GREEN}✅ 所有環境已架設完成！${NC}"
 echo -e "新人現在可以執行您的 push.sh 進行開發同步了。"
+# 在原本的腳本末尾加入：
+echo -e "${GREEN}>>> 安裝 Edge Impulse Python SDK...${NC}"
+pip3 install edge_impulse_linux opencv-python --break-system-packages || pip3 install edge_impulse_linux opencv-python
