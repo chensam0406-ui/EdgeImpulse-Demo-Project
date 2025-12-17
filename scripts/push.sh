@@ -34,6 +34,9 @@ echo "----------------------"
 
 # --- 4. 核心 Git 流程 ---
 
+#同步最新資源
+git pull
+
 # 4.1. 檢查是否有變更
 git status --porcelain
 if [ $? -ne 0 ]; then
