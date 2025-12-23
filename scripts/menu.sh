@@ -31,7 +31,7 @@ while true; do
     case $choice in
         1)
             echo -e "${GREEN}>> 執行推理腳本...${NC}"
-            bash ./scripts/rps_inference.sh
+            python3 scripts/rps_inference.sh
             read -p "按 Enter 回到選單..."
             ;;
         2)
