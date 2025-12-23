@@ -44,7 +44,7 @@ fi
 # 4. 安裝 Edge Impulse CLI (Node.js 套件)
 echo -e "${GREEN}>>> 4. 安裝 Edge Impulse CLI...${NC}"
 sudo npm install -g edge-impulse-cli --unsafe-perm
-
+sudo npm install -g edge-impulse-linux
 # 5. 安裝 Edge Impulse Python SDK 與相關依賴 (影像+音訊)
 echo -e "${GREEN}>>> 5. 安裝 Edge Impulse Python SDK, OpenCV 與 PyAudio...${NC}"
 # 這裡一次補齊 edge_impulse_linux, opencv-python 與你遇到的缺失組件 pyaudio
