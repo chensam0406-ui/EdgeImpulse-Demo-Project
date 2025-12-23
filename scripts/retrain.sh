@@ -26,7 +26,6 @@ if [[ $RESPONSE == *"\"success\":true"* ]]; then
     JOB_ID=$(echo $RESPONSE | grep -oP '(?<="id":)\d+' | head -n 1)
     echo "✅ 成功啟動雲端任務！"
     echo "🔢 Job ID: $JOB_ID"
-    echo "🔗 訓練進度監看: https://studio.edgeimpulse.com/studio/${PID}/job/${JOB_ID}"
 else
     echo "❌ 觸發失敗"
     echo "🔍 原始回應: $RESPONSE"
