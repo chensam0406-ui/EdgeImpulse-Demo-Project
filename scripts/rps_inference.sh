@@ -9,7 +9,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))      # scripts/
 PROJECT_DIR = os.path.dirname(BASE_DIR)                    # 專案根目錄
 MODEL_PATH = os.path.join(PROJECT_DIR, "models", "modelfile.eim")  # 模型路徑
-TESTING_DIR = os.path.join(PROJECT_DIR, "data", "testing")         # testing 資料夾
+TESTING_DIR = os.path.join(PROJECT_DIR, "data", "test")         # testing 資料夾
 
 # --------------------------------------
 # RPS 對應
@@ -51,6 +51,8 @@ try:
 
         if img is None:
             print(f"❌ 讀取失敗: {img_name}")
+            print("(｡•̀ᴗ-)✧*")
+            print("------------------------")
             continue
 
         features, _ = runner.get_features_from_image(img)
@@ -59,6 +61,8 @@ try:
         boxes = result["result"].get("bounding_boxes", [])
         if not boxes:
             print(f"⚠️ {img_name}：沒有偵測到手勢")
+            print("(இ﹏இ`｡)")
+            print("------------------------")
             continue
 
         # 選出置信度最高的
