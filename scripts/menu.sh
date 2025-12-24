@@ -54,7 +54,6 @@ while true; do
         5)
             echo -e "${GREEN}>> 執行上傳訓練資料...${NC}"
             bash ./scripts/upload_data.sh
-            echo "已完成載入。"
             read -p "按 Enter 回到選單..."
             ;;
         q|Q)
