@@ -20,13 +20,14 @@ show_menu() {
     echo -e "${YELLOW}2)${NC} 觸發雲端重新訓練 (Retrain)"
     echo -e "${YELLOW}3)${NC} 提交並推送到 GitHub (Push)"
     echo -e "${YELLOW}4)${NC} 重新載入環境變數 (Source .bashrc)"
+    echo -e "${YELLOW}5)${NC} 上傳訓練資料 (upload_data)"
     echo -e "${YELLOW}q)${NC} 退出 (Quit)"
     echo -e "${BLUE}------------------------------------------${NC}"
 }
 
 while true; do
     show_menu
-    read -p "請輸入選項 [1-4 或 q]: " choice
+    read -p "請輸入選項 [1-5 或 q]: " choice
 
     case $choice in
         1)
@@ -49,6 +50,12 @@ while true; do
             source ~/.bashrc
             echo "已完成載入。"
             sleep 1
+            ;;
+        5)
+            echo -e "${GREEN}>> 執行上傳訓練資料...${NC}"
+            bash ./scripts/upload_data.sh
+            echo "已完成載入。"
+            read -p "按 Enter 回到選單..."
             ;;
         q|Q)
             echo "掰掰！"
