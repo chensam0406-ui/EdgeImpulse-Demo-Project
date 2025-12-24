@@ -9,7 +9,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))      # scripts/
 PROJECT_DIR = os.path.dirname(BASE_DIR)                    # 專案根目錄
 MODEL_PATH = os.path.join(PROJECT_DIR, "models", "modelfile.eim")  # 模型路徑
-TESTING_DIR = os.path.join(PROJECT_DIR, "data", "test")         # testing 資料夾
+TESTING_DIR = os.path.join(PROJECT_DIR, "data", "local_inference")         # testing 資料夾
 
 # --------------------------------------
 # RPS 對應
