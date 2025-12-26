@@ -19,7 +19,7 @@ show_menu() {
     echo -e "${YELLOW}1)${NC} 啟動模型推理 (Inference)"
     echo -e "${YELLOW}2)${NC} 觸發雲端重新訓練 (Retrain)"
     echo -e "${YELLOW}3)${NC} 提交並推送到 GitHub (Push)"
-    echo -e "${YELLOW}4)${NC} 重新載入環境變數 (Source .bashrc)"
+    echo -e "${YELLOW}4)${NC} 檢查環境"
     echo -e "${YELLOW}5)${NC} 上傳訓練資料 (upload_data)"
     echo -e "${YELLOW}q)${NC} 退出 (Quit)"
     echo -e "${BLUE}------------------------------------------${NC}"
@@ -46,9 +46,10 @@ while true; do
             read -p "按 Enter 回到選單..."
             ;;
         4)
-            echo -e "${GREEN}>> 重新載入 .bashrc...${NC}"
-            source ~/.bashrc
-            echo "已完成載入。"
+            echo -e "${GREEN}>> 正在檢查環境...${NC}"
+            bash ./scripts/check_env.sh
+            echo "已完成檢查環境"
+	    read -p "按 Enter 回到選單..."
             sleep 1
             ;;
         5)
